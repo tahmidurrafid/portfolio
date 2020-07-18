@@ -1,0 +1,36 @@
+html{
+    height : 100%;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently */
+    text-align: center;
+    margin : 0;
+    padding : 0;
+    width : 100%;
+    height: 100%;
+}
+
+.page{
+    width: 100%;
+    height: 100%;
+    position : relative;
+}
+
+.panel{
+    width: 100%;
+    position: absolute;
+    top: calc(50% - 70px);
+    left : 0;
+}
+
+/* canvas{
+    width: 1000px;
+    height: 800px;
+} */
