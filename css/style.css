@@ -68,7 +68,7 @@ body{
 
 #home .top{
     box-sizing: border-box;
-    padding : 120px 0 0 100px;
+    padding : 10% 0 0 100px;
     display: flex;
     justify-content: center;
     align-items: center;
