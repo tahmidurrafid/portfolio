@@ -13,6 +13,9 @@ $(document).ready(function(){
         var ctx = canvas.getContext("2d");
 
         let circles = [];
+        let range = 200;
+        let frames = 100;
+
         for(let i = 0; i < 500; i++){
             let circle = {
                 r : 2*Math.random(),
@@ -21,31 +24,35 @@ $(document).ready(function(){
                 a : Math.random(),
                 tx : 0,
                 ty : 0,
+                frames : 0
             };
+            circle.tx = circle.x + range*Math.random() - range/2;
+            circle.ty = circle.y + range*Math.random() - range/2;
             circles.push(circle);
         }
-
-        let range = 100;
         let redraw = function(){
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             for(let i = 0; i < circles.length; i++){
-                let val = Math.random() > .5 ? 2 : -2;
-                if(circles[i].tx + val <= range && circles[i].tx + val >= -range){
-                    circles[i].tx += val;
-                }else{
-                    circles[i].tx -= val;
-                }
-
-                if(circles[i].ty + val <= range && circles[i].ty + val >= -range){
-                    circles[i].ty += val;
-                }else{
-                    circles[i].ty -= val;
-                }
                 ctx.beginPath();
-                ctx.arc(circles[i].x + circles[i].tx, circles[i].y + circles[i].ty, circles[i].r, 
+                ctx.arc(circles[i].x + ( circles[i].tx - circles[i].x)* circles[i].frames/frames, 
+                        circles[i].y + ( circles[i].ty - circles[i].y)*circles[i].frames/frames, 
+                        circles[i].r, 
                         0, 2 * Math.PI, false);
                 ctx.fillStyle = "rgba(255, 255, 255, " + circles[i].a + ")";
                 ctx.fill();
+                if(circles[i].frames == frames){
+                    circles[i].frames = 0;
+                    let temp = circles[i].x;
+                    circles[i].x = circles[i].tx;
+                    circles[i].tx = temp;
+
+                    temp = circles[i].y;
+                    circles[i].y = circles[i].ty;
+                    circles[i].ty = temp;
+                }else{
+                    circles[i].frames++;
+                }
+
             }
         };
         redraw();
