@@ -1,14 +1,18 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap');
+
+
 html{
     height : 100%;
 }
 
 body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-align: center;
     margin : 0;
     padding : 0;
     width : 100%;
     height: 100%;
+    background-color: #000000;
 }
 
 .page{
@@ -16,3 +20,78 @@ body{
     height: 100%;
     position : relative;
 }
+
+.container{
+    width: 100%;
+    height : 100%;
+    display: flex;
+}
+
+#nav{
+    height: 100%;
+    width :20%;
+    display: flex;
+    align-items: center;    
+}
+
+#nav .menu{
+    display: block;
+    box-sizing: border-box;
+    padding-left: 20%;
+}
+
+#nav .menu a{
+    font-family: 'Montserrat Subrayada', Calibri, sans-serif;
+    font-size : 15px;
+    text-decoration: none;
+    color: #c5c5c5;
+    display: block;
+    box-sizing: border-box;
+    line-height: 30px;
+}
+
+#nav .menu a.selected{
+    font-size: 20px;
+    color : #fff;
+}
+
+.content{
+    width : 80%;
+    height : 100%;
+}
+
+#home{
+    color : #fff;
+}
+
+#home .top{
+    display: flex;
+}
+
+#home .dp img{
+    width : 180px;
+    height : 180px;
+    border-radius: 200px;
+    border : solid 10px rgba(255, 255, 255, .1);
+}
+
+#home .description{
+
+}
+
+#home .description .name{
+
+}
+
+#home .description .tagline{
+
+}
+
+#home .description .social{
+
+}
+
+#home .description .social .icon{
+    
+}
+
