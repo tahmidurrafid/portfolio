@@ -78,7 +78,13 @@ body{
     color: #c5c5c5;
     display: block;
     box-sizing: border-box;
-    line-height: 30px;
+    line-height: 40px;
+    transition : font-size .3s, color .3s;
+}
+
+#nav .menu a:hover{
+    font-size: 17px;
+    color : #fff;
 }
 
 #nav .menu a.selected{
@@ -134,12 +140,29 @@ body{
 #home .description .social{
     margin-top: 30px;
     display: flex;
+    text-align: center;
 }
 
 #home .description .social .icon{
     font-size: 30px;
-    padding: 0 15px 0 0;
+    padding: 0 7px 0 0;
     text-decoration: none;
+    color : #fff;
+}
+
+#home .description .social .icon:hover span{
+    transform: scale(1, 1);
+}
+
+#home .description .social .icon span{
+    display: block;
+    font-family: 'oswald', 'Montserrat Subrayada', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    font-size: 10px;
+    background-color: #4396c5;
+    padding: 2px;
+    transform: scale(0, 0);
+    transition: transform .3s;
 }
 
 #home .bottom{
@@ -149,7 +172,7 @@ body{
     bottom: 0;
     left : 0;
     width : 100%;
-    padding-bottom: 5%;
+    padding-bottom: 3%;
 }
 
 a.button{
