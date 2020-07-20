@@ -272,7 +272,7 @@ a.button:hover .borders .leftB, a.button:hover .borders .rightB{
         margin-top: 0;
     }
     #home .top .dp{
-        padding: 15px 0;
+        padding: 0 0 15px;
     }
 
     #home .description .tagline{
