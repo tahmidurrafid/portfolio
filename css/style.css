@@ -257,6 +257,7 @@ a.button:hover .borders .leftB, a.button:hover .borders .rightB{
         position: relative;
         width: 100%;
         height: auto;
+        padding: 10px 0;
     }
     #home{
         display: block;
