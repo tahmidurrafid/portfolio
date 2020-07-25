@@ -1,7 +1,18 @@
 'use strict';
 
 $(document).ready(function(){
+
+    $("#works, #about, #contact").hide();
+
+    $("#nav a").click(function(e){
+        e.preventDefault();        
+        let id = $(this).attr("href");
+        $("#home, #works, #about, #contact").hide();
+        $(id).show();
+    });
+
     $(window).load(function(){
+
         let canvas = document.getElementById("stars");
         window.addEventListener('resize', resizeCanvas, false);
         function resizeCanvas() {
