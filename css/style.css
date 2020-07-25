@@ -307,7 +307,8 @@ a.button.black .topB, a.button.black .bottomB, a.button.black .leftB, a.button.b
     font-family: 'Montserrat Subrayada', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #00aeef;
     color: #fff;
-    font-size: 22px;
+    font-weight: bold;
+    font-size: 18px;
     padding : 10px 20px;
 }
 
@@ -346,6 +347,8 @@ a.button.black .topB, a.button.black .bottomB, a.button.black .leftB, a.button.b
 
 #about .topic .center{
     margin-bottom: 20px;
+    position : relative;
+    z-index: 10;
 }
 
 #about .topic .link{
@@ -382,12 +385,16 @@ a.button.black .topB, a.button.black .bottomB, a.button.black .leftB, a.button.b
     transition : width .3s, height .3s;
 }
 
+
+#about .topic .borders .topB, #about .topic .borders .bottomB, #about .topic .borders .leftB, #about .topic .borders .rightB{
+    background-color : #7f7d7d;
+}
+
 #about .topic .borders .topB{
     top : 0;
     left : 0;
     width : 20px;
     height : 2px;
-    background-color: #000;
 }
 
 #about .topic .borders .bottomB{
@@ -395,8 +402,6 @@ a.button.black .topB, a.button.black .bottomB, a.button.black .leftB, a.button.b
     right : 0;
     width : 20px;
     height : 2px;
-    background-color: #000;
-
 }
 
 #about .topic .borders .leftB{
@@ -404,7 +409,6 @@ a.button.black .topB, a.button.black .bottomB, a.button.black .leftB, a.button.b
     left : 0;
     width : 2px;
     height : 20px;
-    background-color: #000;
 }
 
 #about .topic .borders .rightB{
@@ -412,7 +416,7 @@ a.button.black .topB, a.button.black .bottomB, a.button.black .leftB, a.button.b
     right : 0;
     width : 2px;
     height : 20px;
-    background-color: #000;
+
 }
 
 
