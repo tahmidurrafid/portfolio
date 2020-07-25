@@ -1,6 +1,7 @@
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
 
 html{
     height : 100%;
@@ -58,7 +59,7 @@ body{
 
 #nav{
     height: 100%;
-    width :15%;
+    width :20%;
     display: flex;
     align-items: center;
     position: absolute;
@@ -250,6 +251,16 @@ a.button:hover .borders .topB, a.button:hover .borders .bottomB{
 }
 a.button:hover .borders .leftB, a.button:hover .borders .rightB{
     height : 100%;
+}
+
+#about{
+    display: block;
+    width : 80%;
+    margin-left: 20%;
+    background-color: #fff;
+    min-height: 100%;
+    padding: 70px 100px;
+    box-sizing: border-box;
 }
 
 @media only screen and (max-width: 800px) {
