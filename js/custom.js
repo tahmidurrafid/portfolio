@@ -2,14 +2,49 @@
 
 $(document).ready(function(){
 
-    $("#works, #about, #contact").hide();
+    // $("#works, #about, #contact").hide();
 
-    $("#nav a").click(function(e){
-        e.preventDefault();        
-        let id = $(this).attr("href");
-        $("#home, #works, #about, #contact").hide();
-        $(id).show();
-    });
+    // $("#nav a").click(function(e){
+    //     e.preventDefault();        
+    //     let id = $(this).attr("href");
+    //     $("#home, #works, #about, #contact").hide();
+    //     $(id).show();
+    // });
+
+
+
+    $(window).load(function(){
+        var selector = $(".treeset");
+
+        var canvas = selector.find(".connector canvas")[0];
+        canvas.width  = selector.find(".connector").width();
+        canvas.height = selector.find(".connector").height();
+
+        var ctx = selector.find(".connector canvas")[0].getContext('2d');
+        var from = selector.find(".item_list .item.selected").position();
+        var fromDim = {width : selector.find(".item_list .item.selected").width(), 
+                    height : selector.find(".item_list .item.selected").height()};
+        var canvasFrom = selector.find(".connector canvas").position();
+        var arr = selector.find(".subtree.added .subitem");
+        ctx.strokeStyle = "#ffffff";
+        ctx.lineWidth = 2; 
+        var posFrom = {x : from.left + fromDim.width/2 - canvasFrom.left, y: from.top + fromDim.height - canvasFrom.top + 3};        
+        ctx.beginPath();
+        ctx.arc(posFrom.x, posFrom.y, 5, 0, 2 * Math.PI);
+        ctx.fillStyle = "#ffffff";
+        ctx.fill();
+        for(var i = 0; i < arr.length; i++){
+            ctx.beginPath();
+            var to = arr.eq(i).position();
+            var toDim = {width: arr.eq(i).outerWidth(true), height : arr.eq(i).height()};
+            var posTo = {x : to.left + toDim.width/2 - canvasFrom.left, y : to.top - canvasFrom.top};
+            ctx.moveTo(posFrom.x, posFrom.y)
+            ctx.bezierCurveTo(posTo.x , posFrom.y + (posTo.y - posFrom.y)/2, 
+                        posTo.x, posTo.y, posTo.x, posTo.y);
+            ctx.stroke();
+        }
+    })
+
 
     $(window).load(function(){
 
@@ -27,7 +62,7 @@ $(document).ready(function(){
         let range = 200;
         let frames = 100;
 
-        for(let i = 0; i < 500; i++){
+        for(let i = 0; i < 300; i++){
             let circle = {
                 r : 2*Math.random(),
                 x : canvas.width* Math.random(),
