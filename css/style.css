@@ -207,7 +207,7 @@ body {
   padding-bottom: 3%;
 }
 
-.content #home {
+.content #home, .content #about {
   display: none;
 }
 
@@ -443,6 +443,197 @@ body {
   background-color: #4396c5;
   border-radius: 100px;
   vertical-align: middle;
+}
+
+#works {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #ffffff;
+  min-height: 100vh;
+  padding-left: 20%;
+  display: block;
+  position: relative;
+  padding-right: 40px;
+}
+
+#works .heading .title {
+  font-family: "poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  padding: 25px 0;
+}
+
+#works .heading .title .em {
+  background-color: #4396c5;
+  padding-right: 10px;
+}
+
+#works .gallery {
+  padding-left: 5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#works .gallery .item.rightAlign .thumb .image {
+  text-align: right;
+}
+
+#works .gallery .item.rightAlign .thumb::after {
+  left: 0;
+}
+
+#works .gallery .item.rightAlign .thumb .cover {
+  left: 0;
+}
+
+#works .gallery .item.rightAlign .text {
+  padding-left: 0;
+  padding-right: 80px;
+}
+
+#works .gallery .item.rightAlign .text .box {
+  border-right: solid 3px #4396c5;
+  border-left: none;
+  padding-left: none;
+  padding-right: 40px;
+  text-align: right;
+  margin-left: auto;
+}
+
+#works .gallery .item.rightAlign .text .box::before, #works .gallery .item.rightAlign .text .box::after {
+  left: calc(100% - 6px);
+}
+
+#works .gallery .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 0;
+}
+
+#works .gallery .item .thumb {
+  position: relative;
+  width: 28vw;
+}
+
+#works .gallery .item .thumb .image {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+#works .gallery .item .thumb .image img {
+  width: 85%;
+}
+
+#works .gallery .item .thumb::after {
+  content: '';
+  display: block;
+  width: 85%;
+  height: 100%;
+  position: absolute;
+  left: 15%;
+  top: 5%;
+  background-color: #000000;
+  z-index: 1;
+}
+
+#works .gallery .item .thumb .cover {
+  position: absolute;
+  z-index: 2;
+  width: 15%;
+  left: 85%;
+  top: 5%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#works .gallery .item .thumb .cover a {
+  display: inline-block;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Montserrat Subrayada", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  border: solid 2px #ffffff;
+  padding: 8px 3px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+#works .gallery .item .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 80px;
+}
+
+#works .gallery .item .text .box {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 40px;
+  border-left: solid 3px #4396c5;
+}
+
+#works .gallery .item .text .box::before, #works .gallery .item .text .box::after {
+  content: '';
+  width: 15px;
+  height: 15px;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: solid 3px #4396c5;
+  position: absolute;
+  left: -9px;
+}
+
+#works .gallery .item .text .box::before {
+  top: -12px;
+}
+
+#works .gallery .item .text .box::after {
+  bottom: -12px;
+}
+
+#works .gallery .item .text .caption {
+  font-family: "poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+#works .gallery .item .text .brief {
+  padding-top: 20px;
+  font-family: "poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#works .gallery .item .text .brief .line {
+  color: #ffffff;
+  font-family: 14px;
+  line-height: 25px;
+}
+
+.textColor5 {
+  color: #00EEFF !important;
+}
+
+.italic {
+  font-style: italic;
 }
 
 a.button {

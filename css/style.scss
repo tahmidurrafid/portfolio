@@ -12,6 +12,7 @@ $color1_grad : linear-gradient(0deg, rgba(17,18,26,1) 40%, rgba(5,6,12,1) 100%);
 $color2 : #ffffff;
 $color3 : #4396c5;
 $color4 : #000000;
+$color5 : #00EEFF;
 
 html{
     height : 100%;
@@ -178,7 +179,7 @@ body{
 
 
 .content{
-    #home{
+    #home, #about{
         display: none;
     }
 }
@@ -238,6 +239,11 @@ body{
                 padding-left : 100px;
                 padding : 30px 0 30px 100px;
                 .text{
+                    position: relative;
+                    padding : 0 0 0 30px;
+                    border-left : solid 3px $color3;
+                    box-sizing: border-box;
+
                     .from, .to{
                         font-family: $font2;
                         font-size: 12px;
@@ -251,10 +257,6 @@ body{
                     .to{
                         bottom : -12px;
                     }
-                    position: relative;
-                    padding : 0 0 0 30px;
-                    border-left : solid 3px $color3;
-                    box-sizing: border-box;                    
                     .caption{
                         font-family: $font1;
                         font-size: 20px;
@@ -358,7 +360,6 @@ body{
             display: flex;
             width : 100%;
             justify-content: center;
-            // align-items: center;
             .item{
                 padding: 0 10px;
                 line-height: 50px;
@@ -385,6 +386,163 @@ body{
     }
 }
 
+#works{
+    box-sizing: border-box;
+    color : $color2;
+    min-height: 100vh;
+    padding-left: 20%;
+    display: block;
+    position: relative;
+    padding-right: 40px;
+    .heading{
+        .title{
+            font-family: $font1;
+            font-size: 36px;
+            font-weight: 700;
+            .em{
+                background-color: $color3;
+                padding-right: 10px;
+            }
+            padding: 25px 0;
+        }
+    }
+    .gallery{
+        padding-left: 5%;
+        box-sizing: border-box;
+
+        .item.rightAlign{
+            //padding-right: 120px;
+            .thumb{
+                .image{
+                    text-align: right;
+                }
+                &::after{
+                    left: 0;
+                }
+                .cover{
+                    left: 0;
+                }
+            }
+            .text{
+                padding-left: 0;
+                padding-right: 80px;
+                .box{
+                    border-right : solid 3px $color3; 
+                    border-left: none;      
+                    padding-left: none;
+                    padding-right: 40px;              
+                    &::before, &::after{
+                        left: calc(100% - 6px);
+                    }
+                    text-align: right;
+                    margin-left: auto;
+                }
+            }
+        }
+
+        .item{
+            display: flex;
+            padding : 20px 0;
+            .thumb{
+                position: relative;
+                width: 28vw;
+                .image{
+                    position: relative;
+                    z-index: 10;
+                    width : 100%;
+                    img{
+                        width: 85%;
+                    }
+                }
+                &::after{
+                    content : '';
+                    display: block;
+                    width : 85%;
+                    height: 100%;
+                    position: absolute;
+                    left: 15%;
+                    top: 5%;
+                    background-color: $color4;
+                    z-index: 1;
+                }
+                .cover{
+                    position: absolute;
+                    z-index: 2;
+                    width: 15%;
+                    left: 85%;
+                    top: 5%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    a{
+                        display: inline-block;
+                        writing-mode: vertical-lr;
+                        text-decoration: none;
+                        color: $color2;
+                        font-family: $font2;
+                        font-size: 14px;
+                        border: solid 2px $color2;
+                        padding : 8px 3px;
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+            .text{
+                display: flex;
+                align-items: center;
+                .box{
+                    position: relative;
+                    box-sizing: border-box;
+                    padding-left: 40px;
+                    border-left : solid 3px $color3; 
+                    &::before, &::after{
+                        content : '';
+                        width : 15px;
+                        height : 15px;
+                        display: block;
+                        box-sizing: border-box;
+                        border : solid 3px $color3;  
+                        position: absolute;
+                        left: -9px;
+                    }
+                    &::before{
+                        top: -12px;
+                    }
+                    &::after{
+                        bottom : -12px;
+                    }                    
+                }
+
+                box-sizing: border-box;
+                padding-left: 80px;
+                .caption{
+
+                    font-family: $font1;
+                    font-weight: 700;
+                    font-size: 20px;
+                }
+                .brief{
+                    padding-top: 20px;
+                    font-family: $font1;
+                    .line{
+                        color : $color2;
+                        font-family: 14px;
+                        line-height: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.textColor5{
+    color : $color5 !important;
+}
+
+.italic{
+    font-style: italic;
+}
 
 a.button{
     text-decoration: none;
